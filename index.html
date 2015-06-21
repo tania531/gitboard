@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script data-require="jquery@*" data-semver="2.1.3" src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
+
+    <link data-require="bootstrap-css@*" data-semver="3.3.1" rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" />
+    <script data-require="bootstrap@3.3.2" data-semver="3.3.2" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+      <script data-require="angular.js@1.4.1" data-semver="1.4.1" src="https://code.angularjs.org/1.4.1/angular.js"></script>
+      <link rel="stylesheet" href="style.css" />
+      <script src="script.js"></script>
+    </head>
+  <body ng-app="gh-app">
+    <div class="container">
+
+    <div ng-controller="GHCtrl">
+      <h3>3 Users</h3>
+      <!-- <button type="submit" ng-click="showUsers()">show 5 users</button> -->
+<input ng-model="username" type="text" />
+  <ul>
+    <li ng-repeat="user in users"><img ng-src="{{user.avatar_url}}" /></li>
+
+    <table>
+        <tr>
+        <th ng-repeat="(header, value) in users[0]">
+          {{header}}
+        </th>
+       </tr>
+      <tbody>
+        <tr ng-repeat="row in users">
+          <td ng-repeat="cell in row">
+             {{cell}}
+          </td>
+       </tr>
+      </tbody>
+    </div><!-- end controller -->
+    </div><!-- end container -->
+  </body>
+
+</html>

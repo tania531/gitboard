@@ -1,0 +1,9 @@
+/* Styles go here */
+
+.card{border:thin solid #aaa;
+margin:.5em auto;
+-webkit-box-shadow:3px 7px 24px 0 rgba(102,96,102,.65);
+-moz-box-shadow:3px 7px 24px 0 rgba(102,96,102,.65);
+box-shadow:3px 7px 24px 0 rgba(102,96,102,.65)
+padding:5px;  
+}
